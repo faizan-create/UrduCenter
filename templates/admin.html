@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% include "navmenu.html" %}
+<div class="container-fluid d-flex flex-column justify-content-center">
+ <div class="container d-flex m-5 h-100">
+  <div class="container border d-flex flex-column p-2 justify-content-center">
+   <h3>Add New Article</h3>
+   <a href="/createarticle">
+    <button class="btn btn-outline-danger">Add New Article</button>
+   </a>
+  </div>
+  <div class=" container border d-flex flex-column p-2 justify-content-center">
+   <h3>Add New Post</h3>
+   <a href="/createrecent">
+    <button class="btn btn-outline-danger">Add New Post</button>
+   </a>
+  </div>
+ </div>
+ <div class="container d-flex m-5 h-100">
+  <div class="container border d-flex flex-column p-2 justify-content-center">
+   <h3>Add New Peotry</h3>
+   <a href="/createpeoty">
+    <button class="btn btn-outline-danger">Add New post</button>
+   </a>
+  </div>
+  <div class=" container border d-flex flex-column p-2 justify-content-center">
+   <h3>Add New DuaPost</h3>
+   <a href="/createduas">
+    <button class="btn btn-outline-danger">Add New Post</button>
+   </a>
+  </div>
+ </div>
+</div>
+
+{% endblock %}

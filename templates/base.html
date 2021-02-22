@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <title>Urdu Center</title>
+  <script src="https://kit.fontawesome.com/aae490915d.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" />
+
+</head>
+
+{% include "nav.html" %}
+
+<body>
+
+
+
+  <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  {% block content %}
+
+  {% endblock %}
+
+  <div class="container-fluid main5-background " style="height: 180px; background-color: #004d66; ">
+    <div class="container h-100 d-flex flex-column justify-content-center">
+      <div class=" container d-flex h-25 p-1 justify-content-center  ">
+        <i class=" fab fa-facebook m-2" style="color:blue;"></i>
+        <i class="fab fa-twitter m-2" style="color: #00aced;"></i>
+        <i class="fab fa-youtube m-2" style="color:red;"></i>
+        <i class="fab fa-instagram m-2" style="color:#e95950;"></i>
+        <i class="fab fa-tiktok m-2" style="color:black;"></i>
+      </div>
+      <div class="container d-flex justify-content-center text-white ">
+        <h10 class="m-3" style="font-size: 12px;">About</h10>
+        <h10 class="m-3" style="font-size: 12px;">Contact Us</h10>
+        <h10 class="m-3" style="font-size: 12px;">Privacy</h10>
+        <h10 class="m-3" style="font-size: 12px;">Disclaimer</h10>
+        <h10 class="m-3" style="font-size: 12px;">Need help?</h10>
+      </div>
+      <div class="container d-flex justify-content-center text-white">
+        <p style="font-size: 12px;"><em>© Copyright 2020, All Rights Reserved UrduCenterPlus</em></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    function downFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 700; // For Chrome, Firefox, IE and Opera
+    }
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

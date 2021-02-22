@@ -1,0 +1,23 @@
+<div class="container-fluid nav-background  d-flex justify-content-center align-items-center" style="height: 30vh ">
+
+  <div class="container  d-flex justify-content-center " id="navbar_top">
+
+    <div class="btn-group m-1 " role="group" aria-label="Basic outlined example"
+      style="transform: translate(0%, -12%);">
+      <button style=" background-color:#004d66;" type="button" class="btn btn-outline-secondary">
+        <a href="/" class="text-decoration-none" style="color:darkorange;">
+          <i class="fas fa-newspaper"></i>
+          Home</button></a>
+      {% for post in category_list %}
+      <button type="button" class="btn btn-outline-secondary" style="background-color:#004d66;">
+        <a href="{% url 'urduweb:category' post.name %}" class="text-decoration-none" style="color:darkorange;"> <i
+            class="fas fa-newspaper"></i>
+          {{post.name}}</button></a>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</div>

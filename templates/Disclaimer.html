@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include "navmenu.html" %}
+<div class="container-fluid d-flex flex-column " style="height:130vh; background-color:#004d66">
+  <div class="container " style="background-color:#004d66;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mt-2 ">
+        <li class="breadcrumb-item"><a style="color: #eeaa21;  text-decoration:none;" href="/">Home</a></li>
+        <li class="breadcrumb-item active" style="color: #eeaa21;" aria-current=" page">Disclaimer</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="container d-flex wrapper  h-100 ">
+    <div class=" main container d-flex flex-column  main1-background   " style="height: 660px;margin-top: 2rem;">
+      <div class="container text-dark  mt-5">
+        <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Disclaimer</h3>
+      </div>
+      <div class="container text-center mt-5 text-dark lh-base">
+        <p class="lh-base"><em>
+            Urducenterplus does not represent or endorse the accuracy or reliability of any of the information, content
+            or
+            advertisements (collectively, the “Materials”) contained on, distributed through, or linked, downloaded or
+            accessed from
+            any of the services contained on this website (the “Service”), nor the quality of any products, information
+            or
+            other
+            materials displayed, purchased, or obtained by you as a result of an advertisement or any other information
+            or
+            offer in
+            or in connection with the Service (the “Products”). You hereby acknowledge that any reliance upon any
+            Materials
+            shall be
+            at your sole risk. Urducenterplus reserves the right, in its sole discretion and without any obligation, to
+            make
+            improvements to, or correct any error or omissions in any portion of the Service or the Materials
+          </em></p>
+      </div>
+      <div class="container"></div>
+      <div class=" container d-flex p-1 w-75 justify-content-center  " style="background-color:#004d66;">
+        <i class=" fab fa-facebook m-2 fs-3" style="color:blue;"></i>
+        <i class="fab fa-twitter m-2 fs-3" style="color: #00aced;"></i>
+        <i class="fab fa-youtube m-2 fs-3" style="color:red;"></i>
+        <i class="fab fa-instagram m-2 fs-3" style="color:#e95950;"></i>
+        <i class="fab fa-tiktok m-2 fs-3" style="color:black;"></i>
+      </div>
+    </div>
+
+    <div class="sidebar  container  sidebar-background  " style="height: 660px;margin-top: 2rem;">
+      <div class="container d-flex flex-column justify-content-center mt-5 ">
+        <div class="container  mt-5 h-100 ">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Follow Us On Facebook </h4>
+          <div class="container  mt-2  h-25">
+            <iframe
+              src="https://www.facebook.com/plugins/likebox.php?href=https://web.facebook.com/urducenterplus/&amp;width=300&amp;height=250&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false"
+              scrolling="no" frameborder="0"
+              style="border:none; margin-top: 8px; overflow:hidden; width:300px; height:130px;"
+              allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="container  mt-5 h-100 ">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Subscribe Us On Youtube </h4>
+          <div class="container mt-4  h-100">
+            <iframe class="mt-1" id="video-614-1_youtube_iframe" frameborder="0" allowfullscreen="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="YouTube video player"
+              src="https://www.youtube.com/embed/IqmOC-lFtTU?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Furducenterplus.com&amp;widgetid=1"
+              width="290" height="160"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

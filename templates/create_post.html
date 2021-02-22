@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags %}
+
+{% block content %}
+{% include "navmenu.html" %}
+<div class="container">
+ <form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.media }}
+  {{ form|crispy }}
+  <input type="submit" value="Save" />
+ </form>
+</div>
+{% endblock %}

@@ -1,0 +1,471 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load name_templates_tags %}
+
+{% block content %}
+
+{% include "hometheme.html" %}
+{% include "navmenu.html" %}
+
+<div class="container-fluid wrapperr " style=" height:1080px; width:auto;">
+  <div class="container-fluid d-flex flex-column justify-content-center "
+    style="height:90%; width:95%; overflow: hidden;">
+    <div class="d-flex flex-row mt-5 justify-content-center h-75 ">
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image22.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <div class="content  d-flex flex-column ">
+            <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:#eeaa21;">
+              Blogs
+            </h2>
+            <img style="height: 100px;" src="{% static 'images/blogg.svg'%}" alt="">
+
+          </div>
+        </div>
+      </div>
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image24.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <div class="content  d-flex flex-column text-light">
+            <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#eeaa21;">
+              Duas
+            </h2>
+            <img src="{% static 'images/dua.svg'%}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image26.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <div class="content  d-flex flex-column text-light">
+            <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#eeaa21;">
+              Stories
+            </h2>
+            <img src="{% static 'images/stories.svg'%}" alt="">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="d-flex flex-row justify-content-center h-75 ">
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image25.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <div class="content  d-flex flex-column text-light">
+            <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#eeaa21;">
+              Articles</h2>
+            <img src="{% static 'images/articles.svg'%}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image27.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <d class="content  d-flex flex-column text-light">
+
+            <h2 style="font-family:'Franklin Gothic Medium';color:#eeaa21;">Quotes
+            </h2>
+            <img style="height: 100px;" src="{% static 'images/quotes.svg'%}" alt="">
+
+        </div>
+      </div>
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image28.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <div class="content  d-flex flex-column text-light">
+            <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#eeaa21;">
+              Peotry
+            </h2>
+            <img src="{% static 'images/peotry.svg'%}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row mb-5 justify-content-center h-75 ">
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image20.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <div class="content  d-flex flex-column text-light">
+            <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:#eeaa21;">
+              Videos
+            </h2>
+            <img src="{% static 'images/Videos.svg'%}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex m-1 zoom-in   overflow-hidden">
+
+        <img src="{% static 'images/image29.png' %}" class="img-fluid" />
+        <div class="overlaay">
+          <d class="content  d-flex flex-column text-light">
+
+            <h2 style="font-family:'Franklin Gothic Medium';color:#eeaa21;">Novels
+            </h2>
+            <img style="height: 100px;" src="{% static 'images/novel.svg'%}" alt="">
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="container-fluid d-flex  wrapperrr" style="height:130vh;">
+  <div class="container d-flex wrapper  h-100 ">
+    <div class=" main container     mt-4 " style="height: 620px;">
+      <div class=" container d-block mt-4" style="margin-left: 1rem;">
+        <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: black;">
+          Latest
+          Articles</h2>
+      </div>
+
+      <div class=" container articles mt-4">
+
+        <div class="overflow-hidden  article-image " style="margin-left: 1rem;">
+          <img src="{{posts.image.url }}" style="height: 330px;" alt="">
+        </div>
+
+        <div class="container d-block mt-2" style="margin-left: .2rem;">
+          <h5 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black">
+            {{ posts.title }}</h5>
+          <p class="text-grey"><em>{{posts.description}}</em></p>
+          <button class=" btn btn-primary">Read More >></button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar mt-4 container  " style="height: 620px;">
+      <div class="container d-flex flex-column justify-content-center mt-5 ">
+        <div class="container d-flex ">
+          <h4 style="color:black;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Recent Posts</h4>
+        </div>
+        <div class=" container  ">
+          {% for recentpost in recentposts %}
+          <div class=" d-flex mb-2 mt-2 ">
+            <div class=" d-flex recent-post">
+              <img src=" {{ recentpost.image.url }}" style="height: 67px; width: 100px;" alt="image20">
+              <div class="recent-overlay text-white">
+                <div class="content">
+                  <i class="fas fa-book-open"></i>
+                </div>
+              </div>
+            </div>
+            <div class="px-2">
+              <h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: black;">
+                {{ recentpost.title}}</h6>
+              <p
+                style="font-size: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: gray;">
+                1 Febuary 2021</p>
+            </div>
+          </div>
+          {% endfor %}
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid d-flex main-background " style="height:130vh;background-color: #004d66;">
+  <div class="container d-flex wrapper  h-100 ">
+    <div class=" main container main1-background  " style="height: 580px;margin-top: 6rem;">
+      <div class="container   mt-5 ">
+        <nav>
+          <div class="nav nav-tabs w-75 " id="nav-tab" role="tablist">
+            <a class="nav-link active mr-4" style="background-color: #004d66; color: beige;" id="nav-home-tab"
+              data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Urdu
+              Moral Stories</a>
+            <a class="nav-link" style="background-color: #004d66; color: beige;" id="nav-profile-tab"
+              data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Urdu
+              Motivtional
+              Stoies</a>
+            <a class="nav-link" style="background-color: #004d66; color: beige;" id="nav-contact-tab"
+              data-bs-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+              aria-selected="false">Horror Stories</a>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="container d-flex flex-row">
+
+              <div class=" container   mt-4">
+                <div class="overflow-hidden  article-image ">
+                  <img src="{{posts.image.url}}" style="width:100%;" alt="article image">
+                </div>
+                <div class="mt-2">
+                  <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black">
+                    {{posts.title}}</h5>
+                  <p class="text-white"
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <em>{{posts.description}}</em>
+                  </p>
+                  <button class=" btn btn-primary btn-sm">Read More >></button>
+                </div>
+              </div>
+
+
+              <div class="container   mt-4">
+                <div class=" container  ">
+                  {% for recentpost in recentposts %}
+                  <div class=" d-flex mb-2 mt-2 ">
+                    <div class=" d-flex recent-post">
+                      <img src=" {{ recentpost.image.url }}" style="height: 67px; width: 100px;" alt="image20">
+                      <div class="recent-overlay text-white">
+                        <div class="content">
+                          <i class="fas fa-book-open"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-2">
+                      <h6
+                        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: black;">
+                        {{ recentpost.title}}</h6>
+                      <p
+                        style="font-size: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: gray;">
+                        1 Febuary 2021</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="container d-flex flex-row">
+
+              <div class=" container   mt-4">
+                <div class="overflow-hidden  article-image ">
+                  <img src="{{posts.image.url}}" style="width:100%;" alt="article image">
+                </div>
+                <div class="mt-2">
+                  <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black">
+                    {{posts.title}}</h5>
+                  <p class="text-white"
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <em>{{posts.description}}</em>
+                  </p>
+                  <button class=" btn btn-primary btn-sm">Read More >></button>
+                </div>
+              </div>
+
+
+              <div class="container   mt-4">
+                <div class=" container  ">
+                  {% for recentpost in recentposts %}
+                  <div class=" d-flex mb-2 mt-2 ">
+                    <div class=" d-flex recent-post">
+                      <img src=" {{ recentpost.image.url }}" style="height: 67px; width: 100px;" alt="image20">
+                      <div class="recent-overlay text-white">
+                        <div class="content">
+                          <i class="fas fa-book-open"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-2">
+                      <h6
+                        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: black;">
+                        {{ recentpost.title}}</h6>
+                      <p
+                        style="font-size: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: gray;">
+                        1 Febuary 2021</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane " id="nav-contact" role=" tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="container d-flex flex-row">
+
+              <div class=" container   mt-4">
+                <div class="overflow-hidden  article-image ">
+                  <img src="{{posts.image.url}}" style="width:100%;" alt="article image">
+                </div>
+                <div class="mt-2">
+                  <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black">
+                    {{posts.title}}</h5>
+                  <p class="text-white"
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <em>{{posts.description}}</em>
+                  </p>
+                  <button class=" btn btn-primary btn-sm">Read More >></button>
+                </div>
+              </div>
+
+
+              <div class="container   mt-4">
+                <div class=" container  ">
+                  {% for recentpost in recentposts %}
+                  <div class=" d-flex mb-2 mt-2 ">
+                    <div class=" d-flex recent-post">
+                      <img src=" {{ recentpost.image.url }}" style="height: 67px; width: 100px;" alt="image20">
+                      <div class="recent-overlay text-white">
+                        <div class="content">
+                          <i class="fas fa-book-open"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-2">
+                      <h6
+                        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: black;">
+                        {{ recentpost.title}}</h6>
+                      <p
+                        style="font-size: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: gray;">
+                        1 Febuary 2021</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar  container sidebar-background   " style="height: 580px;margin-top: 6rem;">
+      <div class="container d-flex flex-column justify-content-center mt-5 ">
+        <div class=" container Follow Us   h-25">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Search</h4>
+          <div class="container  mt-3 " style="height: 60px;">
+            <form class="d-flex mt-2">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-primary" type=" submit">Search</button>
+            </form>
+
+          </div>
+        </div>
+        <div class=" container Follow Us mt-5   h-25">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Follow Us</h4>
+          <div class="container    d-flex justify-content-start mt-3 " style="height: 60px;">
+
+            <i class="fab fa-facebook-square p-2 my-2" style="font-size:1.8rem; color:#004d66"></i>
+            <i class="fab fa-twitter-square p-2 my-2 " style="font-size:1.8rem; color:#004d66"></i>
+            <i class="fab fa-instagram-square p-2 my-2" style="font-size:1.8rem; color:#fbad50"></i>
+            <i class="fab fa-tiktok p-2 my-2" style="font-size:1.8rem; color:black"></i>
+          </div>
+        </div>
+        <div class=" container Follow Us mt-5  h-25">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Click For Latest Updates</h4>
+          <div class="container  d-flex  mt-3 " style="height: 60px;">
+
+            <i class="fas fa-bell " style="font-size:1.8rem; transform: translate(300%, 0); color:#004d66"></i>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid d-flex main3-background " style="height:130vh;">
+  <div class="container d-flex wrapper  h-100 ">
+    <div class=" main container main2-background  " style="height: 620px;margin-top: 6rem;">
+      <div class="container   mt-4 ">
+        <div class="container text-white  ">
+          <h4 style="margin-left: 1.5rem;">Duas & Wazaif</h4>
+        </div>
+        <div class="owl-carousel owl-theme  ml-3  mt-3" style="width: 600px;margin-left: 1.7rem;">
+          {% for post in DuasPosts %}
+          <div class="card">
+            <img src="{{post.image.url}}" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-text">{{post.title}}</h6>
+              <span><em>Febuary 2, 2021</em></span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+      <div class="container  mt-4 ">
+        <div class="container text-white  ">
+          <h4 style="margin-left: 1.5rem;">Urdu Peotry</h4>
+        </div>
+
+        <div class="owl-carousel owl-theme  ml-3  mt-3" style="width: 600px;margin-left: 1.7rem;">
+          {% for post in peotry %}
+          <div class="card">
+            <img src="{{ post.image.url }}" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-text">{{ post.title }}</h6>
+              <span><em>Febuary 2, 2021</em></span>
+            </div>
+          </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar container main4-background  " style="height: 620px;margin-top: 6rem;">
+      <div class="container d-flex flex-column justify-content-center mt-5 ">
+        <div class="container text-white   mt-5 h-100 ">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Follow Us On Facebook </h4>
+          <div class="container  mt-2  h-25" style="background-color: #004d66;">
+            <iframe
+              src="https://www.facebook.com/plugins/likebox.php?href=https://web.facebook.com/urducenterplus/&amp;width=300&amp;height=250&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false"
+              scrolling="no" frameborder="0"
+              style="border:none; margin-top: 8px; overflow:hidden; width:300px; height:130px;"
+              allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="container text-white mt-5 h-100 ">
+          <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Subscribe Us On Youtube </h4>
+          <div class="container  mt-4  h-100">
+            <iframe class="mt-1" id="video-614-1_youtube_iframe" frameborder="0" allowfullscreen="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="YouTube video player"
+              src="https://www.youtube.com/embed/IqmOC-lFtTU?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Furducenterplus.com&amp;widgetid=1"
+              width="290" height="160"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
