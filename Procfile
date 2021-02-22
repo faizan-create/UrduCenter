@@ -1,1 +1,1 @@
-web: gunicorn UrduCenter.wsgi
+web: gunicorn UrduCenter.wsgi --logfile -
