@@ -122,6 +122,29 @@
   </div>
 
 </div>
+
+<div class="container-fluid carouselback position-relative d-flex flex-column justify-content-center">
+
+  <div class="owl-carousel owl-theme sliderwrapper d-flex flex-row ">
+    {% for post in AllPost %}
+    <div class="card m-5 overflow-hidden"
+      style="cursor: pointer;background: transparent; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); border-radius: 20px; height: 320px; width: 350px;">
+      <img src=" {{post.image.url}}" class="card-img-top">
+      <div class="card-body text-center d-flex flex-column">
+        <h6 class="card-text"><b>{{post.title}}</b></h6>
+        <span class="badge rounded-pill bg-primary text-white">{{post.category}}</span>
+        <span><em>Febuary 2, 2021</em></span>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+  <div class="navigations text-center mt-3">
+    <button type="button" role="presentation" class="prevbtn"><span aria-label="Previous"><i
+          class="fas fa-arrow-left"></i></span></button><button type="button" role="presentation" class="nextbtn"><span
+        aria-label="Next"><i class="fas fa-arrow-right"></i></span></button>
+  </div>
+
 </div>
 
 

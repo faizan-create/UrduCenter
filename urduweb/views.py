@@ -14,6 +14,7 @@ from django.utils import timezone
 def home(request):
     context = {
         'posts': Post.objects.filter(category=2).first(),
+        'AllPost': Post.objects.all(),
         'recentposts': Post.objects.all()[:4],
         'DuasPosts': Post.objects.filter(category=4
                                          ).all(),

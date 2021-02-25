@@ -105,60 +105,20 @@
   background-position: center;
   background-size: cover;
 }
-.wrapperrr {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('/static/images/backside13.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+
 .nav-background {
   background-image: url('/static/images/backside8.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.main-background {
-  background-image: url('/static/images/backside22.png');
+.carouselback {
+  background: url('/static/images/Abract01.png');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.main1-background {
-  background-image: url('/static/images/backside21.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.sidebar-background {
-  background-image: url('/static/images/backside19.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.main2-background {
-  background-image: url('/static/images/backside24.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.main3-background {
-  background-image: url('/static/images/backside28.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.main4-background {
-  background-image: url('/static/images/backside27.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.main5-background {
-  background-image: url('/static/images/footer.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
 }
 .font p {
   font-family: urdu;
@@ -214,5 +174,24 @@
   color: #000;
 }
 .tagbtn:focus {
+  outline: none;
+}
+.owl-dots {
+  display: none;
+}
+.owl-nav {
+  display: none;
+}
+.nextbtn,
+.prevbtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+.nextbtn:focus {
+  outline: none;
+}
+.prevbtn:focus {
   outline: none;
 }

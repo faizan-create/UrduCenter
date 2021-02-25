@@ -61,22 +61,41 @@
 
   <script src="{% static 'js/owl.carousel.min.js' %}"></script>
   <script>
+
     $('.owl-carousel').owlCarousel({
       loop: true,
       margin: 10,
       nav: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 1800,
+      autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1
         },
-        600: {
-          items: 3
+        700: {
+          items: 2
         },
         1000: {
           items: 3
         }
       }
     })
+
+    var owl = $('.sliderwrapper');
+    owl.owlCarousel();
+    // Go to the next item
+    $('.nextbtn').click(function () {
+      owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.prevbtn').click(function () {
+      // With optional speed parameter
+      // Parameters has to be in square bracket '[]'
+      owl.trigger('prev.owl.carousel', [300]);
+    })
+
     $(function () {
       $('[data-toggle="popover"]').popover()
     })
