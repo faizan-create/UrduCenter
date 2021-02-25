@@ -83,6 +83,15 @@ class CatListView(ListView):
         return content
 
 
+class TagIndexView(ListView):
+    template_name = 'tagpostlsit.html'
+    context_object_name = 'tag_list'
+    model = Post
+
+    def get_queryset(self):
+        return Post.objects.filter(tags__slug=self.kwargs.get('slug'))
+
+
 def category_list(request):
     category_list = Category.objects.exclude(name='Default')
     context = {
@@ -113,3 +122,19 @@ class Contact(CreateView):
     template_name = 'contactus.html'
 
     success_url = reverse_lazy('home')
+
+
+def search(request):
+    querry = request.GET['querry']
+    if len(querry) > 25:
+        AllPost = Post.objects.none
+    else:
+        AllPosttitle = Post.objects.filter(title__icontains=querry)
+        AllPostcontent = Post.objects.filter(content__icontains=querry)
+        AllPost = AllPosttitle.union(AllPostcontent)
+
+    context = {
+        'AllPost': AllPost,
+        'querry': querry
+    }
+    return render(request, 'searchresult.html',  context)

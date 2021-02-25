@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'urduweb',
+    'taggit',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.urls import path
 from urduweb.views import (home, about, disclaimer, PrivacyPolicy,
-                           CreatePost, PostDetailView, CatListView, Contact
+                           CreatePost, PostDetailView, CatListView, Contact, TagIndexView, search
                            )
 app_name = 'urduweb'
 
@@ -28,7 +28,9 @@ urlpatterns = [
     path('disclaimer', disclaimer),
     path('createpost', CreatePost.as_view(), name='add_post'),
     path('posts/<int:pk>', PostDetailView.as_view(), name='duas-detail'),
+    path('tag/<slug>', TagIndexView.as_view(), name='post_tag'),
     path('PrivacyPolicy', PrivacyPolicy),
+    path('search', search),
     path('contact', Contact.as_view(), name="contact"),
     path('category/<str:Category>', CatListView.as_view(), name="category")
 

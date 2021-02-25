@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include "navmenu.html" %}
+<div class="container-fluid d-flex flex-column " style=" background-color:#004d66">
+ <div class="container " style="background-color:#004d66;">
+
+  <nav aria-label="breadcrumb">
+   <ol class="breadcrumb mt-2 ">
+    <li class="breadcrumb-item"><a style="color: #eeaa21;  text-decoration:none;" href="/">Home</a></li>
+    <li class="breadcrumb-item"><a style="color: #eeaa21;  text-decoration:none;" href="/">{{tag_list}}</a></li>
+
+   </ol>
+  </nav>
+
+ </div>
+ <div class="container d-flex flex-column " style="background-color: #eeaa21;">
+  <div class="d-flex">
+   <div class=" main container  d-flex flex-column justify-content-start    " style="margin-top: 2rem;">
+    <div class="container text-dark d-flex justify-content-center  mt-5">
+     <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">{{tag_list}}
+     </h3>
+    </div>
+    {% for post in tag_list %}
+    <div class="container d-flex flex-column justify-content-center text-center mt-5 text-white lh-base "
+     style="height: 250px;">
+     <div class="container d-flex">
+      <h6
+       style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 1rem;color:black">
+       {{ post.title }} | {{post.category}}</h6>
+     </div>
+     <a href="{% url 'urduweb:duas-detail' post.pk %}" class="text-decoration-none text-dark">
+      <div class=" container articles d-flex mt-1 ">
+
+       <div class="overflow-hidden  post-image " style="margin-left: 1rem;">
+        <img src="{{post.image.url }}" style="height: 170px; width:100%" alt="">
+       </div>
+
+       <div class="container d-block mt-2 font " style="margin-left: .2rem;">
+
+        <p>
+         {{ post.description }}
+        </p>
+        <button class=" btn btn-outline-primary">Read More >></button>
+       </div>
+      </div>
+     </a>
+    </div>
+    {% endfor %}
+
+   </div>
+
+   <div class="sidebar   container  " style="margin-top: 2rem;">
+    <div class="container d-flex flex-column justify-content-center mt-5 ">
+     <div class="container  mt-5 h-100 ">
+      <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+       Follow Us On Facebook </h4>
+      <div class="container  mt-2  h-25">
+       <iframe
+        src="https://www.facebook.com/plugins/likebox.php?href=https://web.facebook.com/urducenterplus/&amp;width=300&amp;height=250&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false"
+        scrolling="no" frameborder="0" style="border:none; margin-top: 8px; overflow:hidden; width:300px; height:130px;"
+        allowtransparency="true"></iframe>
+      </div>
+     </div>
+     <div class="container  mt-5 h-100 ">
+      <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+       Subscribe Us On Youtube </h4>
+      <div class="container  mt-4  h-100">
+       <iframe class="mt-1" id="video-614-1_youtube_iframe" frameborder="0" allowfullscreen="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        title="YouTube video player"
+        src="https://www.youtube.com/embed/IqmOC-lFtTU?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Furducenterplus.com&amp;widgetid=1"
+        width="290" height="160"></iframe>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="d-flex justify-content-center">
+   <div class=" pagination">
+    <span class="step-links">
+     {% if page_obj.has_previous %}
+     <a href="?page=1">&laquo; first</a>
+     <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+     {% endif %}
+
+     <span class="current">
+      1 {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+     </span>
+
+     {% if page_obj.has_next %}
+     <a href="?page={{ page_obj.next_page_number }}">next</a>
+     <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+     {% endif %}
+    </span>
+   </div>
+  </div>
+ </div>
+
+</div>
+
+{% endblock %}

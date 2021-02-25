@@ -365,8 +365,9 @@
           <h4 style="font-size:1.4rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
             Search</h4>
           <div class="container  mt-3 " style="height: 60px;">
-            <form class="d-flex mt-2">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex mt-2 " method="get" action="/search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="querry"
+                id="Search">
               <button class="btn btn-primary" type=" submit">Search</button>
             </form>
 

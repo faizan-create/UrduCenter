@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import date
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 
 class Category(models.Model):
@@ -19,6 +20,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     post_view = models.IntegerField(default=0)
     video_url = models.URLField(null=True, blank=True)
+    tags = TaggableManager()
 
     def __str__(self):
         return self.title
