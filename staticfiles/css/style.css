@@ -1,0 +1,197 @@
+@font-face {
+  font-family: urdu;
+  src: url('/static/jameel-noori.ttf');
+}
+
+.test {
+  height: 100vh;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#eeaa21, #004d66);
+  border-radius: 8px;
+}
+.zoom-in img {
+  box-shadow: 20px 20px 20px #111111;
+}
+.zoom-in {
+  position: relative;
+  transition: 0.5 all ease;
+  box-shadow: 0px 0px 10px #eeaa21;
+  border-radius: 10px;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  background: rgb(red, green, blue);
+  cursor: pointer;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.zoom-in:hover {
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  justify-content: start;
+  position: relative;
+  height: 100vh;
+}
+.recent-post {
+  position: relative;
+  transition: 0.5 all ease;
+}
+.recent-overlay {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.overlaay {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.recent-post:hover .recent-overlay {
+  display: block;
+  opacity: 1;
+}
+
+.main {
+  flex: 2;
+}
+.sidebar {
+  flex: 1;
+}
+
+.article-image img {
+  transition: all 1.7s ease-in-out;
+}
+
+.article-image img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.vl {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 2px;
+  height: 80%;
+  border-left: 1px solid #00ccff;
+}
+.v2 {
+  width: 2px;
+  border-bottom: 1px solid #00ccff;
+}
+.wrapperr {
+  background-image: url('/static/images/backside10.png');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-background {
+  background-image: url('/static/images/backside8.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.carouselback {
+  background: url('/static/images/Abract01.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+.font p {
+  font-family: urdu;
+  font-size: 23px;
+  line-height: 30px;
+  color: #333;
+}
+
+.myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: hidden; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #eeaa21; /* Set a background color */
+  color: #004d66; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+.myBtn:hover {
+  background-color: #004d66;
+  color: #eeaa21;
+}
+.myBtn:focus {
+  outline: none;
+}
+.contentfont p {
+  font-family: urdu;
+  font-size: 28px;
+  line-height: 50px;
+  color: #333;
+}
+.tagbtn {
+  background-color: #004d66;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  outline: none;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
+}
+.tagbtn:hover {
+  cursor: pointer;
+  background-color: #eeaa21;
+  color: #000;
+}
+.tagbtn:focus {
+  outline: none;
+}
+.owl-dots {
+  display: none;
+}
+.owl-nav {
+  display: none;
+}
+.nextbtn,
+.prevbtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+.nextbtn:focus {
+  outline: none;
+}
+.prevbtn:focus {
+  outline: none;
+}
