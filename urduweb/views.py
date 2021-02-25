@@ -117,7 +117,7 @@ def PrivacyPolicy(request):
     return render(request, 'privacy.html')
 
 
-class Contact(CreateView):
+class Contactus(CreateView):
     model = Contact
     form_class = ContactForm
     template_name = 'contactus.html'
