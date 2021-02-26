@@ -2,6 +2,9 @@ from django.db import models
 from datetime import date
 from django.urls import reverse
 from taggit.managers import TaggableManager
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 class Category(models.Model):
