@@ -80,6 +80,7 @@
 }
 
 .article-image img {
+  overflow: hidden;
   transition: all 1.7s ease-in-out;
 }
 
@@ -118,7 +119,7 @@
   background-position: right;
   height: 100vh;
   width: 100%;
-  background-size: 65%;
+  background-size: 40%;
 }
 .font p {
   font-family: urdu;
@@ -194,4 +195,37 @@
 }
 .prevbtn:focus {
   outline: none;
+}
+.article-overlay {
+  font-size: 14px;
+  width: 300px;
+  height: 40px;
+  color: #333;
+  background-color: #c7f4ff;
+  border-radius: 25px;
+  text-align: center;
+  transform: translate(60%, -55%);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recent-post-overlay {
+  font-size: 10px;
+  top: 80%;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+}
+.article-content h5 {
+  color: #000;
+  font-size: 1.2rem;
+  font-family: 'Anton', sans-serif;
+}
+.article-content p {
+  font-size: 13px;
+  color: rgb(87, 83, 83);
+}
+.recent-post h6 {
+  font-size: 12px;
+  font-family: 'Bitter', sans-serif;
+  color: black;
+  font-weight: bolder;
 }

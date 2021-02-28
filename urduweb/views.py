@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.urls import reverse_lazy
 from .models import Post, Comment, Category, Contact
+from taggit.models import Tag
 from .forms import Add_Comment, Add_Post, ContactForm
 from django.views.generic import (
     DetailView,
@@ -12,13 +13,20 @@ from django.utils import timezone
 
 
 def home(request):
+
     context = {
-        'posts': Post.objects.filter(category=2).first(),
+        'Articles': Post.objects.filter(category=2).all(),
         'AllPost': Post.objects.all(),
         'recentposts': Post.objects.all()[:4],
+        'popularposts': Post.objects.all()[:5],
         'DuasPosts': Post.objects.filter(category=4
                                          ).all(),
-        'peotry': Post.objects.filter(category=5).all()
+        'peotry': Post.objects.filter(category=5).all(),
+        'post': Post.objects.last(),
+        'tags': Tag.objects.all()
+
+
+
     }
     return render(request, 'index.html', context)
 
